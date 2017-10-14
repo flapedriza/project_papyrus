@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .from-top {
     margin-top: -100%;
     position: absolute;
@@ -19,4 +23,18 @@
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+}
+
+.image_one_home {
+    width: 100%;
+    height: 25vw;
+    opacity: 0.5;
+}
+
+.words_of_home_one {
+    position: absolute;
+    margin-top: -21%;
+    margin-left: 25%;
+    font-size: 4em;
+    width: 100%;
 }
