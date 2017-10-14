@@ -16,6 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from app.users import views as user_views
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r"^api/users/register",
+        user_views.SignUpView.as_view(), name="signup"),
+    url(r"^api/users/login",
+        user_views.LoginView.as_view(), name="login"),
 ]
