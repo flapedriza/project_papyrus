@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import User
 
 
-USER_FIELDS = ('email', 'first_name', 'last_name', 'created',)
+USER_FIELDS = ('email', 'created',)
 
 
 class UserSerializer(serializers.ModelSerializer):

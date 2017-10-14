@@ -1,6 +1,16 @@
 ---
 version: '2'
 services:
+  nginx:
+    restart: always
+    image: nginx:stable
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf/nginx/:/etc/nginx/conf.d
+    links:
+      - backend
+
   postgres:
     image: 'papyrus/db'
     build: ./docker/db
