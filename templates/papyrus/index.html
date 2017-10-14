@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,8 @@
 {% block footer %}{% endblock %}
 </body>
 {% block javascript %}
-    <script src="{% static "js/libraries/jquery/jquery-3.2.1.min.js" %}"></script>
-    <script src="{% static "js/libraries/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/vendor/bootstrap/popper.min.js" %}"></script>
+    <script src="{% static "js/vendor/bootstrap/bootstrap.min.js" %}"></script>
 {% endblock %}
 </html>
