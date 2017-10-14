@@ -42,6 +42,8 @@ INSTALLED_APPS = ['django.contrib.admin',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'app.users',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +122,21 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'
 
 
+AUTH_USER_MODEL = 'users.User'  # Rest Framework
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.'
+    'LimitOffsetPagination',
+    'PAGE_SIZE': 50,
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
 
 
 # Django axes
