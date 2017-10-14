@@ -1,3 +1,4 @@
+{% load staticfiles %}
 {% block header %}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Project Papyrus</a>
@@ -14,7 +15,7 @@
             </ul>
             <ul class="navbar-nav float-right">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link register-btn" href="#">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link log-in-btn" href="#">Log in</a>
@@ -24,4 +25,5 @@
     </nav>
 
     {% include "papyrus/auth/login.html" %}
+    {% include "papyrus/auth/register.html" %}
 {% endblock %}

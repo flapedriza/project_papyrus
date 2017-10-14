@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.shortcuts import render
+
+
+def test_view(request):
+    return render(request, template_name='papyrus/home.html')
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^test/', test_view)
 ]
