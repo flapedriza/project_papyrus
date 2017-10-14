@@ -8,6 +8,7 @@ services:
       - "80:80"
     volumes:
       - ./conf/nginx/:/etc/nginx/conf.d
+      - /static/:/static/
     links:
       - backend
 
@@ -25,7 +26,7 @@ services:
     env_file: './envs/${DOCKER_COMPOSE_ENV}.env'
     volumes:
       - .:/code
-      - ./static:/static/
+      - /static/:/static/
     ports:
       - '8000:8000'
     depends_on:
